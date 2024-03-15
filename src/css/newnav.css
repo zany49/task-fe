@@ -1,0 +1,255 @@
+.navigation {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 97px;
+  width: 100%;
+  padding: 0.5rem 0rem;
+  background-color: whitesmoke;
+  color: black;
+  /* box-shadow: 0 2px 2px 2px rgba(9, 9, 9, 0.23); */
+}
+
+.brand-name {
+  text-decoration: none;
+  color: black;
+  font-size: 1.3rem;
+  margin-left: 1rem;
+}
+
+.navigation-menu {
+  /* margin-left: auto; */
+}
+
+.navigation-menu ul {
+  display: flex;
+  padding: 0;
+  margin-top: 10px;
+  align-items: center;
+}
+
+.navigation-menu li {
+  list-style-type: none;
+  margin: 0 1rem;
+}
+
+.navigation-menu-li-a {
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  background: whitesmoke !important;
+  color: #313131 !important;
+  line-height: 0px;
+}
+
+.hamburger {
+  border: 0;
+  height: 40px;
+  width: 40px;
+  padding: 0.5rem;
+  border-radius: 50%;
+  background-color: #283b8b;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  display: none;
+}
+
+.hamburger:hover {
+  background-color: #2642af;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  margin: 0 6px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  min-width: 190px;
+  border-radius: 5px;
+  background: #fff;
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.25);
+  left: 10px;
+  top: 30px;
+}
+.dropdown-content .dropdown-inner-wrap {
+  margin: 0px;
+  padding: 14px 20px;
+  text-align: start;
+  border-bottom: 1px solid #00000012;
+  cursor: pointer;
+}
+.dropdown-content .dropdown-inner-wrap:last-child {
+  border-bottom: none;
+}
+.dropdown-content a {
+  color: black;
+  padding: 10px 14px;
+  text-decoration: none;
+  display: block;
+  line-height: 20px !important;
+  background-color: #f9f9f9 !important;
+}
+
+.dropdown-content a:hover {
+  color: black;
+  padding: 10px 14px;
+  text-decoration: none;
+  display: block;
+  line-height: 20px !important;
+  background-color: #969696 !important;
+}
+
+@media screen and (max-width: 991px) {
+  .hamburger {
+    display: block;
+  }
+
+  .navigation-menu ul {
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 60px);
+    background-color: whitesmoke;
+    /* border-top: 1px solid black; */
+    display: none;
+  }
+
+  .navigation-menu li {
+    text-align: center;
+    margin: 0;
+    background-color: white !important;
+  }
+
+  .navigation-menu-li-a {
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    background: white !important;
+    color: #313131 !important;
+    padding: 15px !important;
+    line-height: 20px !important;
+    padding-left: 0px !important;
+  }
+
+  .navigation-menu li:hover {
+    background-color: #eee;
+  }
+
+  .navigation-menu.expanded ul {
+    display: block;
+  }
+
+  .dropdown {
+    background-color: white !important;
+  }
+
+  .dropdown-content {
+    display: block;
+    position: absolute;
+    background-color: #f9f9f9;
+    max-width: 90px !important;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    top: 40px;
+    left: 54px;
+    font-size: 12px;
+    min-width: 120px;
+  }
+
+  .dropdown-content a {
+    color: black;
+    padding: 10px 14px;
+    text-decoration: none;
+    display: block;
+    background-color: #f9f9f9 !important;
+  }
+
+  .dropdown-content a:hover {
+    color: black;
+    padding: 10px 14px;
+    text-decoration: none;
+    display: block;
+    line-height: 0px !important;
+    background-color: #969696 !important;
+  }
+
+  .btn-li {
+    padding: 10px;
+    position: relative;
+  }
+
+  .btn-signup {
+    border-radius: 5px;
+    color: white;
+    background-color: #0d0d38;
+    height: 30px;
+    position: relative;
+    top: 0px;
+    border: none;
+    margin: 0 6px;
+    cursor: pointer;
+  }
+}
+
+.btn-li {
+  padding: 10px;
+  position: relative;
+}
+
+.btn-signup {
+  border-radius: 10px;
+  color: white;
+  background-color: #0d0d38;
+  height: auto;
+  position: relative;
+  top: 0px;
+  border: none;
+  margin: 0 6px;
+  cursor: pointer;
+  padding: 11px 20px;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.dropdown:hover .btn-signup {
+  background-color: #0d0d38;
+}
+
+@media screen and (max-device-width: 740px) {
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    margin: 0 0px;
+    right: 10px;
+  }
+}
+
+.close-icon {
+  padding: 2px;
+  margin-bottom: 4px;
+  margin-right: 2px;
+}
+
+
+.preloader {
+  background: #ffffff89;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9999999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
